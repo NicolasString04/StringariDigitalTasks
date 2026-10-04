@@ -1,0 +1,1305 @@
+/* =========================================
+   WORKSPACE DO PROJETO
+========================================= */
+
+.project-workspace {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  /*
+   * Sidebar desktop = 260px
+   */
+  left: 260px;
+
+  z-index: 500;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(112, 34, 190, 0.12),
+      transparent 30%
+    ),
+    rgba(6, 6, 9, 0.98);
+}
+
+.workspace-shell {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d0d13,
+      #08080c
+    );
+
+  border:
+    1px solid
+    rgba(
+      145,
+      71,
+      255,
+      0.32
+    );
+
+  box-shadow:
+    0 25px 100px
+    rgba(
+      0,
+      0,
+      0,
+      0.32
+    );
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.workspace-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 24px;
+
+  padding:
+    24px
+    25px
+    18px;
+}
+
+.workspace-project {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  min-width: 0;
+}
+
+.workspace-project-icon {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    15px;
+
+  color:
+    #a65cff;
+
+  background:
+    rgba(
+      145,
+      71,
+      255,
+      0.1
+    );
+
+  border:
+    1px solid
+    rgba(
+      145,
+      71,
+      255,
+      0.3
+    );
+}
+
+.workspace-project h1 {
+  color: white;
+
+  font-size: 30px;
+}
+
+.workspace-project p {
+  margin-top: 5px;
+
+  color:
+    #918ea1;
+
+  font-size: 13px;
+}
+
+.workspace-header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.workspace-stat {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color:
+    #a9a6b5;
+}
+
+.workspace-stat > div {
+  display: flex;
+
+  flex-direction:
+    column;
+}
+
+.workspace-stat strong {
+  color: white;
+
+  font-size: 14px;
+}
+
+.workspace-stat span {
+  margin-top: 2px;
+
+  color:
+    #7e7b8d;
+
+  font-size: 10px;
+}
+
+.workspace-progress-number {
+  padding:
+    8px
+    12px;
+
+  border-radius:
+    9px;
+
+  color:
+    #b874ff;
+
+  background:
+    rgba(
+      145,
+      71,
+      255,
+      0.08
+    );
+
+  font-size: 13px;
+}
+
+.workspace-close {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    12px;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      71,
+      255,
+      0.2
+    );
+
+  color:
+    #aaa7b7;
+
+  background:
+    #111117;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.workspace-close:hover {
+  color: white;
+
+  border-color:
+    rgba(
+      166,
+      92,
+      255,
+      0.5
+    );
+
+  background:
+    #16151d;
+}
+
+/* =========================================
+   TÍTULO TAREFAS
+========================================= */
+
+.workspace-section-title {
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    0 25px;
+
+  color:
+    #b56dff;
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.06
+    );
+}
+
+.workspace-section-title strong {
+  color: white;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.workspace-toolbar {
+  display: flex;
+
+  gap: 14px;
+
+  padding: 18px;
+}
+
+.workspace-search {
+  flex: 1;
+
+  height: 49px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    0 15px;
+
+  border-radius:
+    10px;
+
+  background:
+    #111117;
+
+  border:
+    1px solid
+    #302e3c;
+}
+
+.workspace-search svg {
+  color:
+    #7d798d;
+}
+
+.workspace-search input {
+  flex: 1;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  color: white;
+
+  background:
+    transparent;
+
+  font-size: 13px;
+}
+
+.workspace-search input::placeholder {
+  color:
+    #737080;
+}
+
+.workspace-search:focus-within {
+  border-color:
+    rgba(
+      153,
+      75,
+      255,
+      0.65
+    );
+}
+
+.workspace-new-task {
+  height: 49px;
+
+  padding:
+    0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: none;
+
+  border-radius:
+    10px;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      90deg,
+      #842cff,
+      #a84fff
+    );
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.workspace-new-task:hover {
+  transform:
+    translateY(-1px);
+
+  filter:
+    brightness(1.08);
+}
+
+/* =========================================
+   KANBAN
+========================================= */
+
+.kanban-board {
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        270px,
+        1fr
+      )
+    );
+
+  gap: 12px;
+
+  padding:
+    0
+    18px
+    18px;
+
+  overflow-x: auto;
+
+  overflow-y:
+    hidden;
+}
+
+.kanban-column {
+  min-width:
+    270px;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction:
+    column;
+
+  padding: 11px;
+
+  border-radius:
+    13px;
+
+  background:
+    rgba(
+      16,
+      16,
+      23,
+      0.84
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.075
+    );
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.kanban-column.drag-over {
+  border-color:
+    rgba(
+      159,
+      80,
+      255,
+      0.7
+    );
+
+  background:
+    rgba(
+      145,
+      71,
+      255,
+      0.07
+    );
+}
+
+/* HEADER COLUNA */
+
+.kanban-column-header {
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    0
+    4px
+    8px;
+}
+
+.kanban-column-header > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.kanban-column-header h2 {
+  color: white;
+
+  font-size: 14px;
+}
+
+.kanban-status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius:
+    50%;
+
+  background:
+    #a2a0ae;
+}
+
+.kanban-doing
+.kanban-status-dot {
+  background:
+    #3b9cff;
+}
+
+.kanban-review
+.kanban-status-dot {
+  background:
+    #ffb326;
+}
+
+.kanban-done
+.kanban-status-dot {
+  background:
+    #2edc91;
+}
+
+.kanban-count {
+  min-width: 28px;
+
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  padding:
+    0 8px;
+
+  border-radius:
+    999px;
+
+  color:
+    #b1aebe;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.055
+    );
+
+  font-size: 11px;
+}
+
+/* ADICIONAR */
+
+.kanban-add-task {
+  min-height: 40px;
+
+  margin-bottom:
+    10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  gap: 7px;
+
+  border-radius:
+    9px;
+
+  border:
+    1px dashed
+    rgba(
+      153,
+      75,
+      255,
+      0.4
+    );
+
+  color:
+    #aa60ff;
+
+  background:
+    rgba(
+      145,
+      71,
+      255,
+      0.025
+    );
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.kanban-add-task:hover {
+  background:
+    rgba(
+      145,
+      71,
+      255,
+      0.07
+    );
+
+  border-color:
+    rgba(
+      153,
+      75,
+      255,
+      0.7
+    );
+}
+
+/* CONTAINER CARDS */
+
+.kanban-column-tasks {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y:
+    auto;
+
+  padding-right:
+    2px;
+}
+
+/* =========================================
+   CARD TAREFA
+========================================= */
+
+.kanban-task {
+  margin-bottom: 9px;
+
+  padding: 14px;
+
+  border-radius:
+    11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #15151e,
+      #111118
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+  cursor: grab;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.kanban-task:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(
+      145,
+      71,
+      255,
+      0.35
+    );
+}
+
+.kanban-task.dragging {
+  opacity: 0.4;
+
+  cursor: grabbing;
+}
+
+.kanban-task h3 {
+  color: white;
+
+  font-size: 13px;
+
+  line-height: 1.35;
+}
+
+.kanban-task > p {
+  margin-top: 6px;
+
+  color:
+    #908d9f;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+.kanban-task-footer {
+  margin-top: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* PRIORIDADE */
+
+.task-priority {
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding:
+    0 9px;
+
+  border-radius:
+    999px;
+
+  font-size: 10px;
+}
+
+.priority-Alta {
+  color:
+    #ff758a;
+
+  background:
+    rgba(
+      255,
+      70,
+      100,
+      0.1
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      70,
+      100,
+      0.25
+    );
+}
+
+.priority-Média {
+  color:
+    #ffc454;
+
+  background:
+    rgba(
+      255,
+      181,
+      40,
+      0.1
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      181,
+      40,
+      0.24
+    );
+}
+
+.priority-Baixa {
+  color:
+    #57ddb1;
+
+  background:
+    rgba(
+      44,
+      207,
+      155,
+      0.1
+    );
+
+  border:
+    1px solid
+    rgba(
+      44,
+      207,
+      155,
+      0.23
+    );
+}
+
+/* DATA */
+
+.task-date {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color:
+    #9692a5;
+
+  font-size: 10px;
+}
+
+/* AVATAR */
+
+.task-avatar {
+  width: 28px;
+  height: 28px;
+
+  margin-left:
+    auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  color: white;
+
+  background:
+    #353246;
+
+  font-size: 9px;
+}
+
+/* VAZIO */
+
+.kanban-empty {
+  padding:
+    24px
+    10px;
+
+  text-align:
+    center;
+
+  color:
+    #656271;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   MODAL TAREFA
+========================================= */
+
+.task-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 900;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  padding: 20px;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.74
+    );
+
+  backdrop-filter:
+    blur(9px);
+}
+
+.task-modal {
+  width:
+    min(
+      100%,
+      570px
+    );
+
+  padding: 28px;
+
+  border-radius:
+    18px;
+
+  background:
+    #0d0d13;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      71,
+      255,
+      0.4
+    );
+
+  box-shadow:
+    0 30px 100px
+    rgba(
+      0,
+      0,
+      0,
+      0.5
+    );
+}
+
+/* HEADER */
+
+.task-modal-header {
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+
+  margin-bottom:
+    26px;
+}
+
+.task-modal-header span {
+  color:
+    #a45aff;
+
+  font-size: 10px;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    2px;
+}
+
+.task-modal-header h2 {
+  margin-top: 4px;
+
+  color: white;
+
+  font-size: 25px;
+}
+
+.task-modal-close {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    center;
+
+  border: none;
+
+  border-radius:
+    9px;
+
+  color:
+    #aaa7b7;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.05
+    );
+
+  cursor: pointer;
+}
+
+/* CAMPOS */
+
+.task-modal-field {
+  flex: 1;
+
+  margin-bottom:
+    18px;
+}
+
+.task-modal-field label {
+  display: block;
+
+  margin-bottom:
+    8px;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.task-modal-field input,
+.task-modal-field textarea,
+.task-modal-field select {
+  width: 100%;
+
+  border-radius:
+    10px;
+
+  border:
+    1px solid
+    #34313f;
+
+  outline: none;
+
+  color: white;
+
+  background:
+    #111117;
+
+  font-family:
+    inherit;
+
+  font-size: 13px;
+}
+
+.task-modal-field input,
+.task-modal-field select {
+  height: 48px;
+
+  padding:
+    0 14px;
+}
+
+.task-modal-field textarea {
+  min-height:
+    105px;
+
+  padding: 14px;
+
+  resize: vertical;
+}
+
+.task-modal-field input:focus,
+.task-modal-field textarea:focus,
+.task-modal-field select:focus {
+  border-color:
+    #9147ff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      145,
+      71,
+      255,
+      0.08
+    );
+}
+
+.task-modal-field input:disabled,
+.task-modal-field textarea:disabled,
+.task-modal-field select:disabled {
+  opacity: 0.6;
+
+  cursor:
+    not-allowed;
+}
+
+/* LINHA */
+
+.task-modal-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 14px;
+}
+
+/* AÇÕES */
+
+.task-modal-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+
+  margin-top: 10px;
+}
+
+.task-modal-main-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.task-delete-button,
+.task-cancel-button,
+.task-save-button {
+  height: 43px;
+
+  padding:
+    0 17px;
+
+  border-radius:
+    9px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.task-delete-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    #ff647b;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      76,
+      103,
+      0.2
+    );
+
+  background:
+    rgba(
+      255,
+      76,
+      103,
+      0.06
+    );
+}
+
+.task-cancel-button {
+  color:
+    #aaa7b6;
+
+  border:
+    1px solid
+    #373441;
+
+  background:
+    transparent;
+}
+
+.task-save-button {
+  color: white;
+
+  border: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #842cff,
+      #a84fff
+    );
+}
+
+.task-delete-button:disabled,
+.task-cancel-button:disabled,
+.task-save-button:disabled {
+  opacity: 0.5;
+
+  cursor:
+    not-allowed;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (
+  max-width: 900px
+) {
+  .project-workspace {
+    left: 220px;
+  }
+}
+
+@media (
+  max-width: 700px
+) {
+  .project-workspace {
+    left: 78px;
+
+    padding: 10px;
+  }
+
+  .workspace-header {
+    align-items:
+      flex-start;
+  }
+
+  .workspace-header-right {
+    gap: 8px;
+  }
+
+  .workspace-stat {
+    display: none;
+  }
+
+  .workspace-toolbar {
+    flex-direction:
+      column;
+  }
+
+  .workspace-new-task {
+    justify-content:
+      center;
+  }
+}
+
+@media (
+  max-width: 550px
+) {
+  .task-modal-row {
+    grid-template-columns:
+      1fr;
+  }
+
+  .task-modal-actions {
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+  }
+
+  .task-modal-main-actions {
+    width: 100%;
+  }
+
+  .task-cancel-button,
+  .task-save-button {
+    flex: 1;
+  }
+}

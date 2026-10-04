@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+
+  --bg: #070709;
+  --surface: #0d0d12;
+  --surface-2: #121219;
+
+  --border: #282330;
+
+  --purple: #8b42f5;
+  --purple-light: #a967ff;
+  --purple-dark: #52208f;
+
+  --text: #ffffff;
+  --text-secondary: #9999ad;
+
+  --green: #28d982;
+  --yellow: #f2b93b;
+  --red: #ff4d6d;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+
+  padding: 52px 44px;
+
+  background:
+    radial-gradient(
+      circle at 95% 100%,
+      rgba(102, 33, 180, 0.14),
+      transparent 28%
+    ),
+    var(--bg);
+}
